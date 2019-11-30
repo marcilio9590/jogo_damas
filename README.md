@@ -1,1 +1,2 @@
-# jogo_damas
+# JOGO DE DAMAS
+# HTML, CSS, KNOCKOUTJS, JQUERY

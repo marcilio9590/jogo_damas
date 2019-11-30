@@ -1,0 +1,27 @@
+.painted {}
+
+main .table {
+    border: 1px solid #dee2e6;
+}
+
+main .table tr:first-child {
+    border-top: none;
+}
+
+main .table tr {
+    height: 120px;
+}
+
+main .table .withPiecePlayerOne {
+    background-image: url('../../assets/img/player-one.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+main .table .withPiecePlayerTwo {
+    background-image: url('../../assets/img/player-two.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}

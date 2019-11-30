@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Damas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+        integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <table class="table">
+                <tbody>
+                    <!-- ko foreach: $data.numberOfRows -->
+                    <tr>
+                        <!-- ko if: $index() % 2 == 0 -->
+
+                        <!-- ko foreach: $parent.numberOfCols -->
+
+                        <!-- ko if: $index() % 2 == 0 -->
+                        <td class="painted bg-primary"
+                            data-bind="class : $parents[1].returnPlayerPosition($parentContext.$index(), $index()), 
+                            click: $parents[1].checkNewPosition.bind($parents[1], $data, $parentContext.$index(), $index())">
+                        </td>
+                        <!-- /ko -->
+
+                        <!-- ko if: $index() % 2 != 0 -->
+                        <td data-bind="class : $parents[1].returnPlayerPosition($parentContext.$index(), $index())">
+                        </td>
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+
+                        <!-- ko if: $index() % 2 != 0 -->
+
+                        <!-- ko foreach: $parent.numberOfCols -->
+
+                        <!-- ko if: $index() % 2 != 0 -->
+                        <td class="painted bg-primary"
+                            data-bind="class : $parents[1].returnPlayerPosition($parentContext.$index(), $index()),
+                            click: $parents[1].checkNewPosition.bind($parents[1], $data, $parentContext.$index(), $index())">
+                        </td>
+                        <!-- /ko -->
+
+                        <!-- ko if: $index() % 2 == 0 -->
+                        <td data-bind="class : $parents[1].returnPlayerPosition($parentContext.$index(), $index())">
+                        </td>
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                    </tr>
+                    <!-- /ko -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/knockout.mapping/2.4.1/knockout.mapping.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+
+</html>
